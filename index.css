@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap');
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+}
+
+input{
+    display: block;
+    max-width: 100%;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: rgb(53, 53, 53);
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:link {
+    color: black;
+  }
+  
+  a:visited {
+    color: black;
+  }
+  
+  a:hover {
+    color: black;
+  }
+  
+  a:active {
+    color: black;
+  }
+
+  /******************************************************/
+
+  header{
+      display: flex;
+      justify-content: center;
+  }
+
+  header > .postIt{
+    position: relative;
+    align-self: flex-start;
+  }
+
+  header > .postIt > h1{
+    font-family: 'Gochi Hand', cursive;
+    text-align: center;
+    background-color: rgb(179, 179, 0);
+    max-width: 100%;
+    width: 18rem;
+    margin: 0;
+    font-size: 3rem;
+    padding: 2em 0;
+    text-decoration: underline;
+    position: relative;
+  }
+
+  .foldedCorner{
+      height: 3rem;
+      width: 3rem;
+      background: linear-gradient(-45deg, rgb(53, 53, 53), rgb(53, 53, 53) 50%, rgb(146, 146, 0) 50%, rgb(146, 146, 0));
+      position: absolute;
+      bottom: 0;
+      right: 0;
+  }
+
+  .formulaire{
+      display: flex;
+      flex-direction: column;
+      margin: 0 1rem 1rem 1rem;
+      color: rgb(199, 199, 199);
+      align-self: flex-start;
+      background-color: rgb(29, 29, 29);
+      border-radius: 2px;
+      box-shadow: 5px 5px 15px 7px rgb(7, 7, 7);
+  }
+
+  .formulaire > h2{
+    font-family: 'Gochi Hand', cursive;
+    font-size: 3rem;
+    text-decoration: underline;
+    margin: 1rem;
+    padding-right: 5rem;
+  }
+
+  .formulaire > input{
+      font-size: 1.8rem;
+      padding: 1em;
+      border-style: none;
+      width: 90%;
+      align-self: center;
+      background-color:  rgb(109, 109, 109);
+      border-radius: 10px;
+      margin-bottom: 1rem;
+  }
+
+  .formulaire > textarea{
+        width: 90%;
+        font-size: 1.5rem;
+        padding: 0.5em 1em;
+        border-style: none;
+        align-self: center;
+        background-color:  rgb(109, 109, 109);
+        border-radius: 10px;
+        resize:none;
+        margin-bottom: 1rem;
+  }
+
+  .formulaire > button{
+      align-self: center;
+      position: relative;
+      border-style: none;
+      outline: none;
+      background-color: rgb(179, 179, 0);
+      font-family: 'Gochi Hand', cursive;
+      font-size: 3rem;
+      padding: 0.5em 1em;
+      border-radius: 10px 10px 0 10%;
+      cursor: pointer;
+      margin-bottom: 1rem;
+  }
+
+  .formulaire > button > .foldedCorner{
+    height: 3rem;
+    width: 3rem;
+    background: linear-gradient(-45deg, rgb(29, 29, 29), rgb(29, 29, 29) 50%, rgb(146, 146, 0) 50%, rgb(146, 146, 0));
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.formulaire > button:hover{
+    background-color: rgb(150, 150, 0);
+}
+
+.formulaire > button:hover .foldedCorner{
+  background: linear-gradient(-45deg, rgb(29, 29, 29), rgb(29, 29, 29) 50%, rgb(99, 99, 0) 50%, rgb(99, 99, 0));
+}
+
+
+/****************************************************************/
+
+main{
+  margin: 5rem;
+  display: flex;
+  justify-content: center;
+}
+
+main > section{
+  display: flex;
+  flex-direction: column;
+}
+
+.toDo{
+  margin-top: 0.5rem;
+  max-width: 100%;
+  width: 45rem;
+  background-color: rgb(29, 29, 29);
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+}
+
+.toDo > .containTitle{
+  display: flex;
+  align-items: center;
+}
+
+.toDo > .containTitle > h2{
+  font-family: 'Gochi Hand', cursive;
+  font-size: 3rem;
+  text-decoration: underline;
+  margin: 0;
+  max-width: 80%;
+  background-color: rgb(179, 179, 0);
+  padding: 0.1em 0.2em;
+  box-shadow: 0 2px 15px 7px rgb(7, 7, 7);
+  overflow-wrap: break-word;
+}
+
+.toDo > .containTitle > span{
+  align-self: flex-start;
+  margin-top: 0.5rem;
+  font-size: 3rem;
+  color: rgb(104, 104, 104);
+  cursor: pointer;
+}
+
+.toDo > .containTitle > span:hover{
+  color: rgb(68, 68, 68);
+}
+
+.toDo > .containTitle > .edit{
+  margin-left: auto;
+}
+
+.toDo > .containTitle > .delete{
+  margin-right: 0.5rem;
+}
+
+.toDo > .containDescription{
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  background-color:  rgb(109, 109, 109);
+  margin: 1rem;
+  overflow-wrap: break-word;
+}
+
+.toDo > .containDescription > p{
+  font-size: 1.5rem;
+  padding: 0.2em 1em;
+  margin: 0;
+}
+
+.editMenu{
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.85);
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+}
+
+.editMenu > .editFormulaire{
+  display: flex;
+  flex-direction: column;
+  margin: 0 1rem 1rem 1rem;
+  color: rgb(199, 199, 199);
+  background-color: rgb(29, 29, 29);
+  border-radius: 2px;
+  box-shadow: 5px 5px 15px 7px rgb(7, 7, 7);
+
+}
+
+.editFormulaire > h2{
+  font-family: 'Gochi Hand', cursive;
+  font-size: 3rem;
+  text-decoration: underline;
+  margin: 1rem;
+  padding-right: 5rem;
+}
+
+.editFormulaire > input{
+  font-size: 1.8rem;
+  padding: 1em;
+  border-style: none;
+  width: 90%;
+  align-self: center;
+  background-color:  rgb(109, 109, 109);
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.editFormulaire > textarea{
+  width: 90%;
+  font-size: 1.5rem;
+  padding: 0.5em 1em;
+  border-style: none;
+  align-self: center;
+  background-color:  rgb(109, 109, 109);
+  border-radius: 10px;
+  resize:none;
+  margin-bottom: 1rem;
+}
+
+.editFormulaire > .saveCancelChange{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.saveCancelChange > button{
+  margin: 0.5rem;
+  font-family: 'Gochi Hand', cursive;
+  font-size: 3rem;
+  padding: 0 0.5em;
+  display: flex;
+  border-style: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 10px;
+  color: rgb(0, 0, 0);
+}
+
+.saveCancelChange > button > span{
+  align-self:center;
+  text-decoration: none;
+  margin-left: 0.5rem;
+}
+
+#save{
+  background-color: rgb(0, 99, 0);
+}
+#save:hover{
+  background-color: rgb(0, 94, 0);
+}
+
+#cancel{
+  background: rgb(155, 0, 0);
+}
+#cancel:hover{
+  background: rgb(146, 0, 0);
+}
+/**********************************************************/
+.valid{
+  outline: none;
+}
+
+.notValid{
+  outline: 1px solid red;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title>To do-maker</title>
+</head>
+<body>
+    
+    <div class="editMenu">
+        <div class="editFormulaire">
+            <h2>Modifier titre*</h2>
+            <input type="text" placeholder="Titre...Max 45 lettres" maxlength="48" class="valid" id="titleModif">
+            <h2>Modifier description*</h2>
+            <textarea placeholder="Modif description" class="valid" id="descriptionModif"></textarea>
+
+            <div class="saveCancelChange">
+                <button id="save">Sauvegarder<span class="material-icons">save</span></button>
+                <button id="cancel">Annuler <span class="material-icons">close</span></button>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <div class="postIt">
+            <h1>To do</h1>
+            <div class="foldedCorner"></div>
+        </div>
+
+        <div class="formulaire">
+            <h2>Titre de la tâche*</h2>
+            <input type="text" placeholder="Titre...Max 45 lettres" id="titre" maxlength="48" class="valid">
+            <h2>Description de la tâche*</h2>
+            <textarea placeholder="Description" id="description" class="valid"></textarea>
+            <button id="submitRequest">Ajouter<div class="foldedCorner"></div></button>
+        </div>
+    </header>
+
+    <main>
+        <section id="containToDo">
+
+            <!--<div class="toDo">
+                <div class="containTitle">
+                    <h2>ceci est un tres long titre de merde gneugneu</h2>
+                    <span class="material-icons edit">edit</span>
+                    <span class="material-icons delete">delete</span>
+                </div>
+
+                <div class="containDescription">
+                    <p>test</p>
+                </div>
+            </div>-->
+
+        </section>
+    </main>
+
+    <script src="script/index/main.js" type="module"></script>
+</body>
+</html>
